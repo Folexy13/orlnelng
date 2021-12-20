@@ -8,17 +8,42 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsiveness.css">
 </head>
 <body>
-    <nav>
-        <h3 id="logo"><a href="/">OrnelNg</a></h3>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Order</a></li>
-            <li><a href="">New Motors</a></li>
-        </ul>
+    <div id="logo">
+        <a class="navbar-brand" href="#">Ornel<span style="color: red;">NG</span></a>
+        <a href="tel:+2347067903042">Call Us: 07067903042</a>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/carMart">Car Mart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sell">Sell your car</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Financing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Property pool</a>
+                </li>
+            </ul>
+        </div>
     </nav>
     <hr >
     <div id='main_container'>
@@ -28,30 +53,43 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="images/car_1.jfif" alt="First slide">
+                        <img class="d-block w-100" src="<%=cars[0].carImage2%>" alt="First slide">
                         <div class="car_details">
-                            <p id="car_name">2021 BMW</p>
-                            <p id="car_distance">1000miles</p>
-                            <p id="car_price">&#8358 2,000,000</p>
+                            <p id="car_name"><%= cars[0].carName%></p>
+                            <p id="car_price">&#8358 <%=cars[0].carPrice%></p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="images/car_1.jfif" alt="Second slide">
+                        <img class="d-block w-100" src="<%=cars[1].carImage%>" alt="Second slide">
                         <div class="car_details">
-                            <p id="car_name">2021 BMW</p>
-                            <p id="car_distance">1000miles</p>
-                            <p id="car_price">&#8358 2,000,000</p>
+                            <p id="car_name"><%=cars[1].carName%></p>
+                            <p id="car_price">&#8358 <%=cars[1].carPrice%></p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="images/car_1.jfif" alt="Third slide">
+                        <img class="d-block w-100" src="<%=cars[2].carImage4%>" alt="Third slide">
                         <div class="car_details">
-                            <p id="car_name">2021 BMW</p>
-                            <p id="car_distance">1000miles</p>
-                            <p id="car_price">&#8358 2,000,000</p>
+                            <p id="car_name"><%=cars[2].carName%></p>
+                            <p id="car_price">&#8358 <%=cars[2].carPrice%></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="<%=cars[3].carImage%>" alt="Third slide">
+                        <div class="car_details">
+                            <p id="car_name"><%=cars[3].carName%></p>
+                            <p id="car_price">&#8358 <%=cars[3].carPrice%></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="<%=cars[6].carImage3%>" alt="Third slide">
+                        <div class="car_details">
+                            <p id="car_name"><%=cars[6].carName%></p>
+                            <p id="car_price">&#8358 <%=cars[6].carPrice%></p>
                         </div>
                     </div>
                 </div>
@@ -64,140 +102,126 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-
             <div id="welcome">
-                <h3>Welcome to Ornelng</h3>
+                <h3>Welcome to OrnelNg</h3>
                 <p>
-                    Buy luxury, convertibles, hybrids, SUVs and pickup trucks at great prices with exceptional customer service.
-                    Search from a long list of auto makes, including Acura, Kia, Infiniti, Mercedes Benz, Lexus and Ford.
-                    Easily browse cars by features, fuel economy, price range, body type with gorgeous photo galleries and more.
+                    De Numez Ornel Nig. Ltd is a fully owned indigenous Nigerian company registered with the Nigeria Corporate Affairs
+                    Commission under the Companies and Allied Matters Act of 1999 to provide world class automobile and real estate
+                    brokerage businesses.
+                    The Automobile angle of the business focuses primarily on procurement of brand new vehicles, heavy equipment & earth
+                    moving machines as well as the sourcing of all accessories in the automobile industry while the property angle of De
+                    Numez Ornel Nig. Ltd deals on leases and sales of completed building and empty lands in choice and emerging areas.
+                    De Numez Ornel Nig Ltd has worked extensively with different corporate clients all over Nigeria. These include but not
+                    limited to;
+                    PC Crowns Ltd, Abuja, Prime Offshore Services LTD, DWC Drilling Ltd, Five & Dime Investment Ltd, Universal Turnkey
+                    Project, Abuja; Abdel Oil & Gas Ltd, Beliac Group, Lagos; SCOA Motors, McVin Oil & Gas, and Radius Engineering just to
+                    mention a few. 
+                    <div class="collapse" id="see_more">Our vision is to continue to push the boundary in our industries as we aim to operate in the top five percent in our
+                    industry.
+                    With our impeccable track record in meeting and surpassing clients expectations, being the bridge between the automobile
+                    companies and their corporate and individual customers, De Numez Ornel Nig Ltd has attracted, over the years, direct
+                    dealership with some of the best and most iconic auto brands in Nigeria, some of which include but not limited to the
+                    following;
+                    <ul>
+                        <li>Rolls Royce Nigeria, Lagos</li>
+                        <li>Posche Nigeria, Lagos</li>
+                        <li>Brabus Nigeria, Lagos</li>
+                        <li>Mercedes Benz, Nigeria, Lagos</li>
+                        <li>Toyota (Germain) Nigeria, Lagos</li>
+                        <li>Hyundai Nigeria, Lagos</li>
+                        <li>Jaguar Nigeria, Lagos</li>
+                        <li>SCOA Motors Nigeria, Lagos</li>
+                        <li>Ashok Leyland Nigeria, Lagos</li>
+                        <li>Volvo Nigeria, Lagos</li>
+                        <li>Bertola Machines & Equipments</li>
+                        <li>Sinotruck Company, Lagos</li>
+                        <li>Mikano Nigeria, Lagos</li>
+                        <li>Weifang Dragon Machinery</li>
+                        <li>Etc.</li>
+                    </ul>
+                    <p>De Numez Ornel Nig Ltd is committed to reinforcing it’s position in the industry by constantly forging partnership and alliances that bring revolutionary ideas into the market.
+                       De Numez Ornel Nig Ltd is excited, therefore, at the prospect of working with you to develop a synergy that seeks to challenge the status quo in the industry.
+                     </p>
+                    </div>
+                    <a  data-toggle="collapse" href="#see_more" role="button" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        <span id='view' style="color:#000">see more</span>
+
+                    </a>
                 </p>
                 <div id="card">
                     <div class="row">
                         <div class="col">
                             <div class="mycard" style="width: 18rem;">
-                                <img class="card-img-top" src="images/car_1.jfif" alt="Card image cap">
+                                <img class="card-img-top" src="<%=cars[1].carImage2%>" alt="Ornel Car">
+                                <!-- <div class="status">
+                                    Sold
+                                </div> -->
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <div class="card__footer"><a href="#">View details</a></div>
+                                    <h5 class="card-title"><%=cars[1].carName%></h5>
+                                    <p class="card-text">Automatic transmission, Thumb start, Navigation system with backup Camera, Multi functional power steering, all round
+                                    airbags, high Tech sound system.</p>
+                                    <a href="/<%=cars[1]._id%>"><div class=" card__footer">View details</div></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mycard" style="width: 18rem;">
-                                <img class="card-img-top" src="images/car_1.jfif" alt="Card image cap">
+                                <img class="card-img-top" src="<%=cars[0].carImage2%>" alt="Ornel Car">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <h5 class="card-title"><%=cars[0].carName%></h5>
+                                    <p class="card-text">The Lexus LX 570 is engineered to go where few other SUVs can. At the same time, it provides a thick layer of luxury and refinement for when the adventure calls for pounding the pavement. </p>
+                                    <a href="/<%=cars[0]._id%>"><div class="card__footer">View details</div></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mycard" style="width: 18rem;">
-                                <img class="card-img-top" src="images/car_1.jfif" alt="Card image cap">
+                                <img class="card-img-top" src="<%=cars[2].carImage2%>" alt="Ornel Car">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <h5 class="card-title"><%=cars[2].carName%></h5>
+                                    <p class="card-text">S2021 Toyota Fortunner EXR, TRD, factory brand new, Automatic transmission, Thumb start, Navigation system with backup
+                                    Camera, Multi functional power steering, all round airbags,</p>
+                                    <a href="/<%=cars[2]._id%>"><div class="card__footer">View details</div></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mycard" style="width: 18rem;">
-                                <img class="card-img-top" src="images/car_1.jfif" alt="Card image cap">
+                                <img class="card-img-top" src="<%=cars[3].carImage4%>" alt="Ornel Car">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <h5 class="card-title"><%=cars[3].carName%></h5>
+                                    <p class="card-text">2021 Toyota Hiace Ambulance service bus, Highroof, brand new, Manual transmission, key start, fully equipped with all
+                                    necessary medical facilities</p>
+                                    <a href="/<%=cars[3]._id%>"><div class="card__footer">View details</div></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mycard" style="width: 18rem;">
-                                <img class="card-img-top" src="images/car_1.jfif" alt="Card image cap">
+                                <img class="card-img-top" src="<%=cars[4].carImage3%>" alt="Ornel Car">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <h5 class="card-title"><%=cars[4].carName%></h5>
+                                    <p class="card-text">2017 Mercedes Benz Sprinter Ambulance service bus, brand new with all required medical facilities.</p>
+                                    <a href="/<%=cars[4]._id%>"><div class="card__footer">View details</div></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mycard" style="width: 18rem;">
-                                <img class="card-img-top" src="images/car_1.jfif" alt="Card image cap">
+                                <img class="card-img-top" src="<%=cars[5].carImage2%>" alt="Ornel Car">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <h5 class="card-title"><%=cars[5].carName%></h5>
+                                    <p class="card-text">2021 Toyota Prado TXL, V4 2.7  engine, factory brand new, Automatic transmission, Thumb start, Navigation system with backup Camera</p>
+                                    <a href="/<%=cars[5]._id%>"><div class="card__footer">View details</div></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="mycard" style="width: 18rem;">
-                                <img class="card-img-top" src="images/car_1.jfif" alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="mycard" style="width: 18rem;">
-                                <img class="card-img-top" src="images/car_1.jfif" alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="mycard" style="width: 18rem;">
-                                <img class="card-img-top" src="images/car_1.jfif" alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="mycard" style="width: 18rem;">
-                                <img class="card-img-top" src="images/car_1.jfif" alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="mycard" style="width: 18rem;">
-                                <img class="card-img-top" src="images/car_1.jfif" alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                                </div>
-                            </div>
-                        </div>
+                    
                     </div>
                 </div>
-            </div>
+
+           </div>
         </div>
 
         <div class="sub-main">
@@ -262,8 +286,191 @@
                 <button type="submit"><a href="/">Search</a></button>
             
             </div>
+            <div id="top_deal">
+                <h3>Top Deal</h3>
+                <div id="td_img">
+                    <div id="td_car_text">
+                        <p id="name">2021 Lexus</p>
+                        <p id="price">&#8358 1000</p>
+                    </div>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/ornelng.appspot.com/o/images%2Fcar_1b.jpeg?alt=media&token=76002fa3-105a-4e30-a698-d55a82ab7d41" alt="top deal car1">
+                </div>
+                <div id="td_img">
+                    <div id="td_car_text">
+                        <p id="name">2021 Range Rover</p>
+                        <p id="price">&#8358 1000</p>
+                    </div>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/ornelng.appspot.com/o/images%2Fcar_2d.jpeg?alt=media&token=29f3f2f5-655a-4e51-b221-449286a6c5a5" alt="top deal car2">
+                </div>
+                <div id="td_img">
+                    <div id="td_car_text">
+                        <p id="name">2021 Toyota</p>
+                        <p id="price">&#8358 1000</p>
+                    </div>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/ornelng.appspot.com/o/images%2Fcar_6c.jpeg?alt=media&token=d0444f90-325e-4897-a17f-cdf3ebb0d075" alt="top deal car3">
+                </div>
+            
+            </div>
         </div>
     </div>
+    <footer id="footer" class="footer-32892 pb-0">
+      <div class="site-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md pr-md-5 mb-4 mb-md-0">
+              <h3>About Us</h3>
+              <p class="mb-4">De Numez Ornel Nig. Ltd is a fully owned indigenous Nigerian company registered with the Nigeria Corporate Affairs
+            Commission under the Companies and Allied Matters Act of 1999 to provide world class automobile and real estate
+            brokerage businesses.</p>
+              <ul class="list-unstyled quick-info mb-4">
+                <li><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-phone"></span> +2347067903042</a></li>
+                <li><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-envelope"></span> OrnelNg@gmail.com</a></li>
+              </ul>
+            <h3>Subscribe to Our Newsletter</h3>
+              <form action="#" class="subscribe">
+                <input type="text" class="form-control" placeholder="Enter your e-mail">
+                <input type="submit" class="btn btn-submit" value="Send">
+              </form>
+            </div>
+            <div class="col-md mb-4 mb-md-0">
+              <h3>Sell Your Car</h3>
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-6">
+                    <label for="validationCustom01" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="Mark" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="validationCustom02" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="John" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="validationCustom03" class="form-label">City</label>
+                    <input type="text" class="form-control" placeholder="City your car is in" id="validationCustom03" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid city.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="validationCustom05" class="form-label">State</label>
+                    <input type="text" class="form-control" placeholder="State your car is in" id="validationCustom05" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid state.
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="validationCustom05" class="form-label">Name of Car</label>
+                    <input type="text" class="form-control" placeholder="2021 Lexus" id="validationCustom05" required>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="validationCustom05" class="form-label">Price of Car</label>
+                    <input type="text" class="form-control" placeholder="&#8358 22m" id="validationCustom05" required>
+                </div>
+                <div class="col-12">
+                    <label for="validationCustomUsername" class="form-label">Email</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="email" placeholder="your email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+                            required>
+                        <div class="invalid-feedback">
+                            Please input your email.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Agree to terms and conditions
+                        </label>
+                        <div class="invalid-feedback">
+                            You must agree before submitting.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-2">
+                    <button class="btn btn-success" type="submit">Sell your car</button>
+                </div>
+            </form>
+            </div>
+
+            <div class="col-md mb-4 mb-md-0">
+              <h3>Contact us</h3>
+              <div class="row gallery">
+                <div class="col-12">
+                  <p>Malu Road abakaliki shrine. Futa. Akure</p>
+                </div>
+                <form class="row" novalidate>
+                    <div class="col-md-6">
+                        <label for="validationCustom01" class="form-label">First name</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="Mark" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationCustom02" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="John" required>
+                    </div>
+                <div class="col-12">
+                    <label for="validationCustomUsername" class="form-label">Email</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="email" placeholder="your email" class="form-control" id="validationCustomUsername"
+                            aria-describedby="inputGroupPrepend" required>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="validationCustomUsername" class="form-label">Your Message</label>
+                    <div class="input-group has-validation">
+                        <textarea class="form-control" placeholder="Your Message" cols="100"></textarea>
+                    </div>
+                </div>
+                <div class="col-12 mt-2">
+                    <button class="btn btn-success" type="submit">Send</button>
+                </div>
+                </form>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-12">
+              <div class="py-5 footer-menu-wrap d-md-flex align-items-center">
+                <ul class="list-unstyled footer-menu mr-auto">
+                    <li>
+                        <a  href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="#">Car Mart</a>
+                    </li>
+                    <li id="sell">
+                        <a href="#sell">Sell your car</a>
+                    </li>
+                    <li>
+                        <a class="nav-link disabled">Financing</a>
+                    </li>
+                    <li>
+                        <a class="nav-link disabled">Blog</a>
+                    </li>
+                    <li>
+                        <a>Property pool</a>
+                    </li>
+                </ul>
+                <div class="site-logo-wrap ml-auto">
+                <a class="navbar-brand" href="#">Ornel<span style="color: red;">NG</span></a>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=title%>
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsiveness.css">
+</head>
+
+<body>
+    <div id="logo">
+        <a class="navbar-brand" href="#">Ornel<span style="color: red;">NG</span></a>
+        <a href="tel:+2347067903042">Call Us: 07067903042</a>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Car Mart <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sell your car</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Financing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Blog</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link">Property pool</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <hr>
+
+    <div class="view">
+        <div class="view">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <img
+                        src="<%= car.carImage%>">
+                    <div class="text"><%= car.carName%></div>
+                </div>
+    
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img
+                        src="<%= car.carImage2%>">
+                    <div class="text"><%= car.carName%></div>
+                </div>
+    
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img
+                        src="<%= car.carImage3%>">
+                    <div class="text"><%= car.carName%></div>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <img
+                        src="<%= car.carImage4%>">
+                    <div class="text"><%= car.carName%></div>
+                </div>
+    
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+    
+        </div>
+        <div id="carDescription">
+            <h3>Car Description</h3>
+            <p>
+                <%= car.carDescription%>
+            </p>
+            <!-- <div id="car_tab">
+                    <div id="show_img">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/ornelng.appspot.com/o/images%2Fcar_2c.jpeg?alt=media&token=670c6466-0a9d-4b6c-8438-5f1e7556417b" alt="">
+                    </div>
+                    <div id="show_img">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/ornelng.appspot.com/o/images%2Fcar_2c.jpeg?alt=media&token=670c6466-0a9d-4b6c-8438-5f1e7556417b" alt="">
+                    </div>
+                    <div id="show_img">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/ornelng.appspot.com/o/images%2Fcar_2c.jpeg?alt=media&token=670c6466-0a9d-4b6c-8438-5f1e7556417b" alt="">
+                    </div>
+                    <div id="show_img">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/ornelng.appspot.com/o/images%2Fcar_2c.jpeg?alt=media&token=670c6466-0a9d-4b6c-8438-5f1e7556417b" alt="">
+                    </div>
+                </div> -->
+    
+        </div>
+    </div>
+
+<footer id="footer" class="footer-32892 pb-0">
+    <div class="site-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md pr-md-5 mb-4 mb-md-0">
+                    <h3>About Us</h3>
+                    <p class="mb-4">De Numez Ornel Nig. Ltd is a fully owned indigenous Nigerian company registered with
+                        the Nigeria Corporate Affairs
+                        Commission under the Companies and Allied Matters Act of 1999 to provide world class automobile
+                        and real estate
+                        brokerage businesses.</p>
+                    <ul class="list-unstyled quick-info mb-4">
+                        <li><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-phone"></span>
+                                +2347067903042</a></li>
+                        <li><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-envelope"></span>
+                                OrnelNg@gmail.com</a></li>
+                    </ul>
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <form action="#" class="subscribe">
+                        <input type="text" class="form-control" placeholder="Enter your e-mail">
+                        <input type="submit" class="btn btn-submit" value="Send">
+                    </form>
+                </div>
+                <div class="col-md mb-4 mb-md-0">
+                    <h3>Sell Your Car</h3>
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-6">
+                            <label for="validationCustom01" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="Mark" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom02" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="validationCustom02" placeholder="John" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom03" class="form-label">City</label>
+                            <input type="text" class="form-control" placeholder="City your car is in"
+                                id="validationCustom03" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid city.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom05" class="form-label">State</label>
+                            <input type="text" class="form-control" placeholder="State your car is in"
+                                id="validationCustom05" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid state.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="validationCustom05" class="form-label">Name of Car</label>
+                            <input type="text" class="form-control" placeholder="2021 Lexus" id="validationCustom05"
+                                required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="validationCustom05" class="form-label">Price of Car</label>
+                            <input type="text" class="form-control" placeholder="&#8358 22m" id="validationCustom05"
+                                required>
+                        </div>
+                        <div class="col-12">
+                            <label for="validationCustomUsername" class="form-label">Email</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                <input type="email" placeholder="your email" class="form-control"
+                                    id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                    Please input your email.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                    Agree to terms and conditions
+                                </label>
+                                <div class="invalid-feedback">
+                                    You must agree before submitting.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <button class="btn btn-success" type="submit">Sell your car</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md mb-4 mb-md-0">
+                    <h3>Contact us</h3>
+                    <div class="row gallery">
+                        <div class="col-12">
+                            <p>Malu Road abakaliki shrine. Futa. Akure</p>
+                        </div>
+                        <form class="row" novalidate>
+                            <div class="col-md-6">
+                                <label for="validationCustom01" class="form-label">First name</label>
+                                <input type="text" class="form-control" id="validationCustom01" placeholder="Mark"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustom02" class="form-label">Last name</label>
+                                <input type="text" class="form-control" id="validationCustom02" placeholder="John"
+                                    required>
+                            </div>
+                            <div class="col-12">
+                                <label for="validationCustomUsername" class="form-label">Email</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                    <input type="email" placeholder="your email" class="form-control"
+                                        id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="validationCustomUsername" class="form-label">Your Message</label>
+                                <div class="input-group has-validation">
+                                    <textarea class="form-control" placeholder="Your Message" cols="100"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-2">
+                                <button class="btn btn-success" type="submit">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="py-5 footer-menu-wrap d-md-flex align-items-center">
+                    <ul class="list-unstyled footer-menu mr-auto">
+                        <li>
+                            <a href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Car Mart</a>
+                        </li>
+                        <li>
+                            <a href="#">Sell your car</a>
+                        </li>
+                        <li>
+                            <a class="nav-link disabled">Financing</a>
+                        </li>
+                        <li>
+                            <a class="nav-link disabled">Blog</a>
+                        </li>
+                        <li>
+                            <a>Property pool</a>
+                        </li>
+                    </ul>
+                    <div class="site-logo-wrap ml-auto">
+                        <a class="navbar-brand" href="#">Ornel<span style="color: red;">NG</span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

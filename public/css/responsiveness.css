@@ -1,0 +1,100 @@
+@media(max-width:1550px){
+    body{
+        line-height: 1.1
+    }
+    #main_container{
+    display: grid;
+    grid-template-columns: 80%;
+    width: 90%;
+    margin: auto;
+}
+.carousel-item img{
+    height: 70vh !important;
+    background-position: center;
+}
+#search,#top_deal{
+    max-height: unset;
+}
+.navbar-nav{
+    display:block;
+    padding-left:0px
+}
+}
+
+
+@media(max-width:1041px){
+.col{
+    flex-grow: unset;
+    padding-right:0px;
+    margin:auto
+}
+nav{
+    width:100%;
+    overflow:visible
+}
+
+}
+
+
+@media(max-width:991px){
+   
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+@media (max-width: 767.98px) {
+        .footer-32892 .footer-menu li {
+          display: block; } 
+    }
+@media (max-width: 767.98px) {
+          .footer-32892 .footer-menu li a {
+            display: block;
+            padding-left: 0px; } 
+    }
+@media(max-width:500px){
+    .main{
+        margin-top: 0px;
+    }
+    #main_container{
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+    margin: auto;
+}
+.carousel-item img{
+
+}
+#welcome,#footer,.sub-main{
+    width:90%;
+    margin: 10px auto;
+}
+
+.car_details p{
+    padding: 10px 10px;
+    color: #fff !important;
+    z-index: 40px;
+}
+.car_details #car_name{
+    font-size :1.2em;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bolder;
+    border-right: 2px solid #fff;
+}
+.car_details #car_distance{
+    font-size :1.2em;
+    font-family:sans-serif;
+    font-weight:bolder;
+}
+.car_details #car_price{
+    font-size :1.2em;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:italic;
+    color: red !important;
+}
+.carousel-item img{
+    height: 100vh !important;
+    background-position: center;
+}
+}

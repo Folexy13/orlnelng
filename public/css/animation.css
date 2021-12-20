@@ -1,0 +1,61 @@
+
+.main{
+    transition: 0.5s;
+    animation:  slideInFromLeft 3s ease
+}
+
+.sub-main{
+    transition: 0.5s;
+    animation:  slideInFromRight 3s ease   
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  opacity: 1 !important;
+}
+
+@keyframes slideInFromRight{
+    0%{
+        transform: translateX(500px)
+    }
+    100%{
+        transform: translateX(0px)
+    }
+}
+@keyframes slideInFromLeft{
+    0%{
+        transform: translateX(-500px)
+    }
+    100%{
+        transform: translateX(0px)
+    }
+}
+@keyframes slideInFromTop{
+    0%{
+        transform: translateY(500px)
+    }
+    100%{
+        transform: translateX(0px)
+    }
+}
+@keyframes slideInFromBottom{
+    0%{
+        transform: translateY(-500px)
+    }
+    100%{
+        transform: translateX(0px)
+    }
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
